@@ -44,3 +44,10 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## 使用到的文档
+react-router V6: https://reactrouter.com/en/main
+TailwindCss: https://tailwindcss.com/
+react-icons: https://react-icons.github.io/react-icons
+React: https://zh-hans.reactjs.org/
+使用 TypeScript 编写 React 的优秀实践!: https://www.51cto.com/article/716710.html
