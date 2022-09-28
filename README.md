@@ -1,12 +1,12 @@
 # TODO
 
-1. - [] 登录失败加一个抖动效果
-2. - [] @别名无法获取到省略的index.tsx
-3. - [] 禁止页面下拉
-4. - [] 有人加入了or离开了给个提醒
-5. - [] 添加{user} is typing
-6. - [] 展示多少人在线，哪些人在线
-7. - [] 添加私聊
+1. - [ ] 登录失败加一个抖动效果
+2. - [ ] @别名无法获取到省略的index.tsx
+3. - [ ] 禁止页面有下拉效果
+4. - [ ] 有人加入了or离开了给个提醒
+5. - [ ] 添加{user} is typing
+6. - [ ] 展示多少人在线，哪些人在线
+7. - [ ] 添加私聊
 
 # Getting Started with Create React App
 
@@ -67,3 +67,5 @@ React: https://zh-hans.reactjs.org/
 使用 TypeScript 编写 React 的优秀实践!: https://www.51cto.com/article/716710.html
 
 Redux Toolkit: https://redux-toolkit.js.org/introduction/getting-started
+
+Socket.io: https://socket.io/
