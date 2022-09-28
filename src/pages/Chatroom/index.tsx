@@ -4,7 +4,9 @@ interface IProps {
 }
 const Chatroom: FC<IProps> = (data) => {
     const [text, setText] = useState("");
+    const [chatList, setchatList] = useState([]);
     function sendHandler(e:KeyboardEvent) {
+        // 发送消息
         if (e.key === 'Enter') {
             console.log(`${text}已发送！`)
             setText("")

@@ -1,3 +1,8 @@
+# TODO
+
+1. - [] 登录失败加一个抖动效果
+2. - [] @别名无法获取到省略的index.tsx
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -55,3 +60,5 @@ react-icons: https://react-icons.github.io/react-icons
 React: https://zh-hans.reactjs.org/
 
 使用 TypeScript 编写 React 的优秀实践!: https://www.51cto.com/article/716710.html
+
+react-redux: https://react-redux.js.org/introduction/getting-started
