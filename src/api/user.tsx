@@ -1,10 +1,10 @@
+import ajax from './service'
 
+export interface User {
+ username: string,
+ password: string
+}
 
-export function getFetchOrder(user) {
-    return {
-        url: "/order/detail?is_enc=1",
-        data,
-        isLoading: true,
-        cache: false,
-    };
+export const loginFetch = (user: User) => {
+    return ajax.post('user/login', user)
 }

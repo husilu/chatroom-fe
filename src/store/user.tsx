@@ -1,16 +1,16 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
-import { userAPI } from './userAPI'
+import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { loginFetch, User } from '../api/user'
 
 // First, create the thunk
-const loginFetch = createAsyncThunk(
+const loginFetchThunk = createAsyncThunk(
   'user/login',
-  async (payload) => {
-    const response = await userAPI.fetchById(payload)
+  async (payload:User) => {
+    const response = await loginFetch(payload)
     return response.data
   }
 )
 
-interface User {
+interface UserInfo {
     nickName: string,
     userName: string,
     avatar: string,
@@ -18,7 +18,7 @@ interface User {
 }
 
 interface UserState {
-  userInfo: User,
+  userInfo: UserInfo,
   loading: boolean
 }
 
@@ -34,17 +34,17 @@ const usersSlice = createSlice({
   reducers: {},
   extraReducers(build) {
     build
-      .addCase(loginFetch.pending, (state, action) => {
+      .addCase(loginFetchThunk.pending, (state, action) => {
         state.loading = true;
       })
-      .addCase(loginFetch.fulfilled, (state, action) => {
+      .addCase(loginFetchThunk.fulfilled, (state, action) => {
         state.loading = false;
         state.userInfo = action.payload;
       })
-      .addCase(loginFetch.rejected, (state, action) => {
+      .addCase(loginFetchThunk.rejected, (state, action) => {
         state.loading = false;
       });
   },
 })
 
-export { usersSlice, loginFetch };
+export { usersSlice, loginFetchThunk };

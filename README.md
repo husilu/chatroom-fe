@@ -2,6 +2,11 @@
 
 1. - [] 登录失败加一个抖动效果
 2. - [] @别名无法获取到省略的index.tsx
+3. - [] 禁止页面下拉
+4. - [] 有人加入了or离开了给个提醒
+5. - [] 添加{user} is typing
+6. - [] 展示多少人在线，哪些人在线
+7. - [] 添加私聊
 
 # Getting Started with Create React App
 
@@ -51,7 +56,7 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## 使用到的文档
-react-router V6: https://reactrouter.com/en/main
+React-router V6: https://reactrouter.com/en/main
 
 TailwindCss: https://tailwindcss.com/
 
@@ -61,4 +66,4 @@ React: https://zh-hans.reactjs.org/
 
 使用 TypeScript 编写 React 的优秀实践!: https://www.51cto.com/article/716710.html
 
-react-redux: https://react-redux.js.org/introduction/getting-started
+Redux Toolkit: https://redux-toolkit.js.org/introduction/getting-started
