@@ -6,15 +6,15 @@ const loginFetchThunk = createAsyncThunk(
   'user/login',
   async (payload:User) => {
     const response = await loginFetch(payload)
-    return response.data
+    return response
   }
 )
 
 interface UserInfo {
-    nickName: string,
-    userName: string,
+    nickname: string,
+    username: string,
     avatar: string,
-    userId: string
+    id: string
 }
 
 interface UserState {
@@ -39,7 +39,7 @@ const usersSlice = createSlice({
       })
       .addCase(loginFetchThunk.fulfilled, (state, action) => {
         state.loading = false;
-        state.userInfo = action.payload;
+        state.userInfo = action.payload as unknown as UserInfo
       })
       .addCase(loginFetchThunk.rejected, (state, action) => {
         state.loading = false;

@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
 import { AiOutlineSmile } from 'react-icons/ai';
-import userReducer from 'src/store'
+// import userReducer from 'src/store'
 interface IProps {
     content?: string,
 }

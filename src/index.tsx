@@ -5,7 +5,7 @@ import {
 } from "react-router-dom";
 import routes from './routes';
 import "./styles/main.css"
-import store from './store'
+import { store } from './store'
 import { Provider } from 'react-redux'
 // import reportWebVitals from './reportWebVitals';
 

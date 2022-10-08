@@ -2,6 +2,10 @@ import { useState } from 'react';
 import { FC } from "react";
 import { AiOutlineLoading } from "react-icons/ai"
 import { useNavigate } from "react-router-dom";
+// import { loginFetch } from '../../api/user'
+import { useDispatch } from 'react-redux'
+import { loginFetchThunk } from '../../store/user';
+import { AppDispatch } from '../../store/index';
 interface IProps {
     content?: string,
 }
@@ -10,9 +14,16 @@ const Login: FC<IProps> = (data) => {
     const [username, setusername] = useState("");
     const [password, setpassword] = useState("");
     const [isloadingState, setisloadingState] = useState(false);
-    const navigate = useNavigate()
-    function LoginHandler() {
-        navigate("/")
+    const dispatch = useDispatch<AppDispatch>();
+    const navigate = useNavigate();
+    async function LoginHandler() {
+        try {
+            dispatch(loginFetchThunk({username, password}))
+            navigate("/")
+        } catch(err) {
+
+        }
+        
     }
     function RegisterHandler() {
 
