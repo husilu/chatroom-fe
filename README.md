@@ -7,6 +7,7 @@
 5. - [ ] 添加{user} is typing
 6. - [ ] 展示多少人在线，哪些人在线
 7. - [ ] 添加私聊
+8. - [ ] tailwind 集成 Scss
 
 # Getting Started with Create React App
 

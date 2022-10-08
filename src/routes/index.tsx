@@ -1,7 +1,7 @@
 // ./src/router.tsx
 // import Chatroom from "@/pages/Chatroom";
 // import Login from "@/pages/Login";
-import Chatroom from 'src/pages/Chatroom';
+import Chatroom from 'src/pages/Chatroom/Layout';
 import Login from 'src/pages/Login';
 
 interface IRouter {

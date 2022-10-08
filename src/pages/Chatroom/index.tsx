@@ -14,7 +14,6 @@ const Chatroom: FC<IProps> = () => {
         if (e.key === 'Enter') {
             chatList.push(text)
             setchatList([...chatList])
-            // console.log('userReducer', userReducer.getState())
             setText("")
         }
     }
