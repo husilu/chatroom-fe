@@ -48,3 +48,5 @@ const usersSlice = createSlice({
 })
 
 export { usersSlice, loginFetchThunk };
+
+export type { UserInfo };
