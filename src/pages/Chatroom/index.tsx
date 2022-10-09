@@ -18,7 +18,7 @@ const Chatroom: FC<IProps> = () => {
         }
     }
     return (
-        <div className="bg-sky-300 grid grid-cols-4 w-screen h-screen">
+        <div className="bg-sky-300 grid grid-cols-4 relative w-full h-80v">
             <div className="col-span-4 border border-gray-100 flex flex-col">
                 {/* <div className="border-b-2 border-stone-50"></div> */}
                 {/* <div className=""></div> */}
@@ -39,9 +39,9 @@ const Chatroom: FC<IProps> = () => {
             {/* <div className="border border-gray-100">
 
             </div> */}
-            <div className="fixed bottom-0 flex p-3 bg-slate-50/90 w-screen flex justify-between items-center">
-                <input value={text} enterKeyHint="send" type="text" className="w-11/12 h-7 rounded-md pl-1 text-black py-2" onChange={(e) => setText(e.target.value)} onKeyDown={(e) => sendHandler(e as unknown as KeyboardEvent)}/>
-                <AiOutlineSmile className="text-sky-400"></AiOutlineSmile>
+            <div className="absolute bottom-0 py-3 bg-slate-50/90 flex justify-between items-center w-full">
+                <input value={text} enterKeyHint="send" type="text" className="ml-3 w-11/12 h-7 rounded-md pl-1 text-black py-2" onChange={(e) => setText(e.target.value)} onKeyDown={(e) => sendHandler(e as unknown as KeyboardEvent)}/>
+                <AiOutlineSmile className="text-sky-400 flex-auto flex justify-between items-center"></AiOutlineSmile>
             </div>
         </div>
     );
