@@ -71,3 +71,8 @@ React: https://zh-hans.reactjs.org/
 Redux Toolkit: https://redux-toolkit.js.org/introduction/getting-started
 
 Socket.io: https://socket.io/
+
+## 参考技术文章
+聊天室：https://juejin.cn/post/6854573222415826957#heading-0
+
+Nest.js 实战：https://juejin.cn/post/7032079740982788132
