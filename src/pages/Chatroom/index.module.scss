@@ -1,0 +1,22 @@
+.wrap {
+    width: 60px;
+    .icon-item {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 5px 0;
+        justify-content: center;
+        svg {
+            width: 30px;
+            height: 30px;
+        }
+        &:hover {
+            cursor: pointer;
+            svg {
+                color: white;
+            }
+        }
+    }
+}
+
+
