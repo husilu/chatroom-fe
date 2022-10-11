@@ -1,0 +1,21 @@
+.wrap {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 999;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    .container {
+        padding: 20px;
+    }
+    .header {
+        padding: 5px;
+        border-bottom: 1px solid #000;
+    }
+    .themewrap {
+        display: flex;
+        
+    }
+}

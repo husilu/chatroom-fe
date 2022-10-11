@@ -2,6 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  /* 默认样式 */
+  :root {
+    --text-color-base: #C8839C;
+    --bg-color-base1: #ee7093;
+    --bg-color-base2: #fff;
+    --bg-color-base3: #fdf0f4;
+  }
+  /* 主题样式 */
+  .theme-pink1 {
+    --text-color-base: #C8839C;
+    --bg-color-base1: #ee7093;
+    --bg-color-base2: #fff;
+    --bg-color-base3: #fdf0f4;
+  }
+  .theme-pink2 {
+    --text-color-base: #c5b4e5;
+    --bg-color-base1: #ffdfe9;
+    --bg-color-base2: #fff;
+    --bg-color-base3: #e5eaf9;
+  }
+  .theme-pink3 {
+    --text-color-base: #deefff;
+    --bg-color-base1: #ffaaab;
+    --bg-color-base2: #fff;
+    --bg-color-base3: #ffeadc;
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
