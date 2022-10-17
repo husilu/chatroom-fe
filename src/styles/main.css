@@ -5,29 +5,29 @@
 @layer base {
   /* 默认样式 */
   :root {
-    --text-color-base: #C8839C;
-    --bg-color-base1: #ee7093;
-    --bg-color-base2: #fff;
-    --bg-color-base3: #fdf0f4;
+    --text-color-base: 200,131,156;
+    --bg-color-base1: 238,112,147;
+    --bg-color-base2: 255,255,255;
+    --bg-color-base3: 253,240,244;
   }
   /* 主题样式 */
   .theme-pink1 {
-    --text-color-base: #C8839C;
-    --bg-color-base1: #ee7093;
-    --bg-color-base2: #fff;
-    --bg-color-base3: #fdf0f4;
+    --text-color-base: 200,131,156;
+    --bg-color-base1: 238,112,147;
+    --bg-color-base2: 255,255,255;
+    --bg-color-base3: 253,240,244;
   }
   .theme-pink2 {
-    --text-color-base: #c5b4e5;
-    --bg-color-base1: #ffdfe9;
-    --bg-color-base2: #fff;
-    --bg-color-base3: #e5eaf9;
+    --text-color-base: 197,180,229;
+    --bg-color-base1: 255,223,233;
+    --bg-color-base2: 255,255,255;
+    --bg-color-base3: 229,234,249;
   }
   .theme-pink3 {
-    --text-color-base: #deefff;
-    --bg-color-base1: #ffaaab;
-    --bg-color-base2: #fff;
-    --bg-color-base3: #ffeadc;
+    --text-color-base: 222,239,255;
+    --bg-color-base1: 255,170,171;
+    --bg-color-base2: 255,255,255;
+    --bg-color-base3: 255,234,220;
   }
 }
 

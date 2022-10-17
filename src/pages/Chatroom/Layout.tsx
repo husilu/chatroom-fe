@@ -1,5 +1,5 @@
 import ToolPanel from "./ToolPanel"
-import Informationlist from "./Informationlist"
+import Informationlist from "../../components/InformationList/Informationlist"
 import ChatBox from './index'
 import { useSelector } from 'react-redux'
 import cx from 'classnames';

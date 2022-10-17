@@ -1,4 +1,10 @@
 /** @type {import('tailwindcss').Config} */
+function withOpacity({opacity, vb}) {
+  if (opacity !== undefined) {
+    return `rgba(${vb}, ${opacity})`;
+  }
+  return `rgb(${vb})`;
+}
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
@@ -16,15 +22,9 @@ module.exports = {
         }
       },
       backgroundColor: {
-        // skin: {
-        //   base: ({opacity}) => {
-        //     if (opacity !== undefined) {
-        //       return `rgba(var(--color-text-inverted), ${opacity})`;
-        //     }
-        //     return `rgb(var(--color-text-inverted))`;
-        //   },
-        //   light: 'var(--color-text-muted)',
-        // }
+        skin: {
+          base: withOpacity('--bg-color-base1', 1)
+        }
       }
     },
   },

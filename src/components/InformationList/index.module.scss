@@ -1,0 +1,28 @@
+img {
+    height: 50px;
+    border-radius: 50%;
+    width: 50px;
+    max-width: 50px !important;
+}
+
+.name {
+    color: #fff;
+    font-size: 20px;
+}
+
+.content {
+    color: #000;
+    font-size: 16px;
+}
+
+.active {
+    background-color: rgba(0,0,0,0.1);
+}
+
+.left {
+    margin-right: 5px;
+}
+
+.information {
+    background-color: rgba(var(--bg-color-base1));
+}
