@@ -14,18 +14,18 @@ module.exports = {
       height: {
         '80v': '80vh'
       },
-      backgroundColor: {
-        skin: {
-          pink1: 'var(--bg-color-base1)',
-          pink2: 'var(--bg-color-base2)',
-          pink3: 'var(--bg-color-base3)',
-        }
-      },
-      backgroundColor: {
-        skin: {
-          base: withOpacity('--bg-color-base1', 1)
-        }
-      }
+      // backgroundColor: {
+      //   skin: {
+      //     pink1: 'var(--bg-color-base1)',
+      //     pink2: 'var(--bg-color-base2)',
+      //     pink3: 'var(--bg-color-base3)',
+      //   }
+      // },
+      // backgroundColor: {
+      //   skin: {
+      //     base: withOpacity('--bg-color-base1', 1)
+      //   }
+      // }
     },
   },
   plugins: [],

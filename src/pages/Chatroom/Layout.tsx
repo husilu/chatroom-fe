@@ -13,7 +13,7 @@ export default function Layout() {
   }
   
   return (
-    <div className={cx("flex", "items-center", "justify-center", "h-screen", "bg-blue-300")}>    
+    <div className={cx("flex", "items-center", "justify-center", "h-screen")}>    
       <div className="flex w-10/12 border border-gray-100">
         <ToolPanel user={user}></ToolPanel>
         <Informationlist></Informationlist>

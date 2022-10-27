@@ -5,29 +5,29 @@
 @layer base {
   /* 默认样式 */
   :root {
-    --text-color-base: 200,131,156;
-    --bg-color-base1: 238,112,147;
-    --bg-color-base2: 255,255,255;
-    --bg-color-base3: 253,240,244;
+    --text-color-base: rgb(200,131,156);
+    --bg-color-left: rgb(238,112,147);
+    --bg-color-center: rgb(255,255,255);
+    --bg-color-right: rgb(253,240,244);
   }
   /* 主题样式 */
   .theme-pink1 {
-    --text-color-base: 200,131,156;
-    --bg-color-base1: 238,112,147;
-    --bg-color-base2: 255,255,255;
-    --bg-color-base3: 253,240,244;
+    --text-color-base: rgb(200,131,156);
+    --bg-color-left: rgb(238,112,147);
+    --bg-color-center: rgb(255,255,255);
+    --bg-color-right: rgb(253,240,244);
   }
   .theme-pink2 {
-    --text-color-base: 197,180,229;
-    --bg-color-base1: 255,223,233;
-    --bg-color-base2: 255,255,255;
-    --bg-color-base3: 229,234,249;
+    --text-color-base: rgb(197,180,229);
+    --bg-color-left: rgb(255,223,233);
+    --bg-color-center: rgb(255,255,255);
+    --bg-color-right: rgb(229,234,249);
   }
   .theme-pink3 {
-    --text-color-base: 222,239,255;
-    --bg-color-base1: 255,170,171;
-    --bg-color-base2: 255,255,255;
-    --bg-color-base3: 255,234,220;
+    --text-color-base: rgb(222,239,255);
+    --bg-color-left: rgb(255,170,171);
+    --bg-color-center: rgb(255,255,255);
+    --bg-color-right: rgb(255,234,220);
   }
 }
 
@@ -35,15 +35,3 @@
   padding: 0;
   margin: 0;
 }
-
-.pop-trangle:after {
-  position: absolute;
-  top: 7px;
-  right: -10px;
-  border: 6px solid transparent;
-  border-left: 6px solid rgba(248, 250, 252, 0.9);
-  content: "";
-  display: block;
-  z-index: 1;
-}
-

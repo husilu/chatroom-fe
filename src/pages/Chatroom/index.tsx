@@ -1,5 +1,7 @@
 import { FC, useState } from "react";
 import { AiOutlineSmile } from 'react-icons/ai';
+import cx from 'classnames'
+import styles from './index.module.scss'
 // import userReducer from 'src/store'
 interface IProps {
     content?: string,
@@ -18,7 +20,7 @@ const Chatroom: FC<IProps> = () => {
         }
     }
     return (
-        <div className="bg-sky-300 grid grid-cols-4 relative w-full h-80v">
+        <div className={cx(["grid grid-cols-4 relative w-full h-80v", styles.chatconwrap])}>
             <div className="col-span-4 border border-gray-100 flex flex-col">
                 {/* <div className="border-b-2 border-stone-50"></div> */}
                 {/* <div className=""></div> */}
@@ -28,7 +30,7 @@ const Chatroom: FC<IProps> = () => {
                         return (
                             <div className="self flex flex-row-reverse my-3" key={index}>
                                 <img src="" alt="" />
-                                <div className="relative pop mr-2 bg-slate-50/90 p-1 text-sm rounded pop-trangle">
+                                <div className={cx(["relative mr-2 p-1 text-sm rounded", styles.popColor, styles.pop])}>
                                     {item}
                                 </div>
                             </div>

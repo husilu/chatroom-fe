@@ -1,5 +1,6 @@
-.wrap {
+.toolpwrap {
     width: 60px;
+    background-color: var(--bg-color-left);
     .icon-item {
         display: flex;
         align-items: center;
@@ -19,4 +20,21 @@
     }
 }
 
+.chatconwrap {
+    background-color: var(--bg-color-right);
+}
 
+.popColor {
+    background-color: var(--text-color-base)
+}
+
+.pop:after {
+    position: absolute;
+    top: 7px;
+    right: -10px;
+    border: 6px solid transparent;
+    border-left: 6px solid var(--text-color-base);
+    content: "";
+    display: block;
+    z-index: 1;
+  }
