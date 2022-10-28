@@ -37,4 +37,48 @@
     content: "";
     display: block;
     z-index: 1;
-  }
+}
+
+.noticepopwrap {
+    display: inline-block;
+    padding: 5px 8px;
+    background-color: var(--text-color-base);
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.fr {
+    float: right;
+}
+
+.header {
+    padding: 4px 10px;
+    font-size: 20px;
+    border-bottom: 1px solid #000;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    .headerTitle {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .peoplewrap {
+        cursor: pointer;
+    }
+    // .peoplewrap {
+    //     display: flex;
+    //     align-items: center;
+    //     cursor: pointer;
+    // }
+}
+
+.themesItem {
+    border: 1px solid #000;
+    margin-bottom: 5px;
+}
+
+.themesItem.active {
+    border: 1px solid red;
+}

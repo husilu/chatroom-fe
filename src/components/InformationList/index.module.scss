@@ -6,7 +6,7 @@ img {
 }
 
 .name {
-    color: #fff;
+    color: #000;
     font-size: 20px;
 }
 
@@ -20,9 +20,19 @@ img {
 }
 
 .left {
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
 .information {
     background-color: var(--bg-color-center);
+    overflow-y: auto;
+    .inforItem {
+        width: 150px;
+        overflow-x: hidden;
+        > div {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap; 
+        }
+    }
 }

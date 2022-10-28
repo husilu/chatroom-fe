@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { usersSlice } from './user';
+import { themeSlice } from './theme';
 import thunk from "redux-thunk";
 
 export const store =  configureStore({
   reducer: {
-    user: usersSlice.reducer
+    user: usersSlice.reducer,
+    theme: themeSlice.reducer
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(thunk)
 })

@@ -5,21 +5,24 @@ import cx from 'classnames';
 import styles from './index.module.scss';
 import { useState } from 'react';
 import Modal from 'src/components/Modal'
+import { useDispatch, useSelector } from 'react-redux'
+import {changeTheme} from '../../store/theme'
 interface IProps {
   content?: string,
   user: UserInfo
 }
 
 export default function ToolPanel(props: IProps) {
+  const dispatch = useDispatch()
+  let theme = useSelector((state: any) => state.theme.theme);
   const [Modaltext, setModaltext] = useState(<></>); // 弹窗内容
   const [ModalVisible, setModalVisible] = useState(false); // 是否显示弹窗
-  let iconArray = [{icon: <AiOutlineBulb></AiOutlineBulb>,  title: '消息'}, {icon: <RiTShirt2Line onClick={changeTheme}></RiTShirt2Line>,  title: '换肤'}, {icon: <AiFillGithub key="AiFillGithub"></AiFillGithub>,  title: '仓库链接', link: "https://github.com/husilu/chatroom-fe"}, {icon: <AiOutlineLogout></AiOutlineLogout>,  title: '登出'}]
+  let iconArray = [{icon: <AiOutlineBulb></AiOutlineBulb>,  title: '消息'}, {icon: <RiTShirt2Line onClick={changeThemeModal}></RiTShirt2Line>,  title: '换肤'}, {icon: <AiFillGithub key="AiFillGithub"></AiFillGithub>,  title: '仓库链接', link: "https://github.com/husilu/chatroom-fe"}, {icon: <AiOutlineLogout></AiOutlineLogout>,  title: '登出'}]
   let themes = [{name: "粉色1", className: "theme-pink1"}, {name: "粉色2", className: "theme-pink2"}, {name: "粉色3", className: "theme-pink3"}]
-  function changeTheme() {
-    
+  function changeThemeModal() {
     let Modaltext =  <div className="grid-cols-3">
         {themes.map(item => {
-          return <div className={cx([item.className, styles.themesItem])} key={item.name}></div>
+          return <div className={cx([item.className, styles.themesItem, item.className === theme ? 'active' : ""])} key={item.name} onClick={() => changeColor(item.className)}>{item.name}{item.className}{theme}</div>
         })}
     </div>
     setModaltext(Modaltext)
@@ -27,6 +30,9 @@ export default function ToolPanel(props: IProps) {
   }
   function onClose() {
     setModalVisible(false)
+  }
+  function changeColor(color: string) {
+    dispatch(changeTheme(color))
   }
   return (
     <div className={cx([styles.toolpwrap, "flex", "flex-col", "justify-between", "bg-blue", "dark:bg-blue"])}>
