@@ -49,7 +49,7 @@ const Chatroom: FC<IProps> = (props) => {
             <div className={cx([styles.header])}><div className={styles.headerTitle}>{title}</div><div className={cx([styles.peoplewrap])}><BsFillPeopleFill></BsFillPeopleFill></div></div>
             <div className={cx(["grid grid-cols-4", styles.chatconwrap])}>
                 {/* 聊天面板头部 */}
-                <div className="col-span-4 border border-gray-100 flex flex-col">
+                <div className="col-span-4 border flex flex-col">
                     {/* <div className="border-b-2 border-stone-50"></div> */}
                     {/* <div className=""></div> */}
                     {/* 对话面板 */}

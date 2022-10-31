@@ -79,6 +79,8 @@
     margin-bottom: 5px;
 }
 
-.themesItem.active {
-    border: 1px solid red;
+.themesItem {
+    &.active {
+        border: 1px solid red;
+    }   
 }
