@@ -1,6 +1,6 @@
 import { FC, useState, useEffect } from "react";
-import { AiOutlineSmile } from 'react-icons/ai';
-import { BsFillPeopleFill } from 'react-icons/bs';
+import { AiOutlineSmile, AiOutlineSwapRight } from 'react-icons/ai';
+import { BsFillPeopleFill, BsPersonFill } from 'react-icons/bs';
 import cx from 'classnames'
 import styles from './index.module.scss'
 // 加入退出气泡
@@ -15,6 +15,16 @@ interface chatItem {
     type: number // 可改为枚举？  1 为聊天气泡  2 为提醒气泡
 }
 
+interface IJoiner {
+    name: string,
+    avatar: string
+}
+
+enum roomType {
+    publicChat,
+    privateChat
+}
+
 const Chatroom: FC<IProps> = (props) => {
     // 聊天面板标题
     let { title } = props;
@@ -22,6 +32,14 @@ const Chatroom: FC<IProps> = (props) => {
     const [text, setText] = useState("");
     // 消息数组
     const [chatList, setchatList] = useState<chatItem[]>([]);
+    // 该聊天室用户列表
+    const [userList, setuserList] = useState<IJoiner[]>([])
+    // 当前在线人数
+    const [onlineNum, setonlineNum] = useState(0)
+    // 展示侧边栏
+    const [showsidebar, setshowsidebar] = useState(false)
+    // 侧边栏type 0:为群聊 1:为私聊
+    const [bartype, setbartype] = useState<roomType>(0)
     // 聊天气泡
     function sendHandler(e: KeyboardEvent) {
         // 发送消息
@@ -44,16 +62,47 @@ const Chatroom: FC<IProps> = (props) => {
         })
         setchatList([...chatList])
     }
+    function openSideBar() {
+        setshowsidebar(true)
+    }
+    function closeSideBar() {
+        setshowsidebar(false)
+    }
+    function chooseSideBar() {
+        return <div className={cx([styles.userList])}>
+        <div className={styles.userlistHeader}>
+            <AiOutlineSwapRight onClick={closeSideBar}></AiOutlineSwapRight>
+        </div>
+        {bartype === 0 ? <>
+            <div className={styles.roomPeopleNum}>
+            当前人数：{onlineNum}
+            </div>
+            <div className="px-3">
+                {userList.map(item => {
+                return <div className="flex">
+                    <img src={item.avatar} alt="" />
+                    <span>{item.name}</span>
+                </div>
+            })}
+            </div>
+        </> : <div>私聊板块</div>}
+    </div>
+    }
+    function sideBarIcon() {
+        return <>
+            {bartype === 0 ? <BsFillPeopleFill></BsFillPeopleFill> : <BsPersonFill></BsPersonFill>}
+        </>
+    }
     return (
         <div className={cx(["w-full relative", styles.chatconwrap])}>
-            <div className={cx([styles.header])}><div className={styles.headerTitle}>{title}</div><div className={cx([styles.peoplewrap])}><BsFillPeopleFill></BsFillPeopleFill></div></div>
-            <div className={cx(["grid grid-cols-4", styles.chatconwrap])}>
+            {title ? <div className={cx([styles.header])}><div className={styles.headerTitle}>{title}</div><div className={cx([styles.peoplewrap])} onClick={openSideBar}>{sideBarIcon()}</div></div> : ""}
+            <div className={cx(["grid grid-cols-4"])}>
                 {/* 聊天面板头部 */}
-                <div className="col-span-4 border flex flex-col">
+                <div className="col-span-4 flex flex-col">
                     {/* <div className="border-b-2 border-stone-50"></div> */}
                     {/* <div className=""></div> */}
                     {/* 对话面板 */}
-                    <div className="px-3">
+                    {/* <div className=""> */}
                         {chatList.map((item, index) => {
                             return (
                                 item.type === 1 ?
@@ -65,7 +114,7 @@ const Chatroom: FC<IProps> = (props) => {
                                     </div> : <Pop>{item.content}</Pop>
                             )
                         })}
-                    </div>
+                    {/* </div> */}
                 </div>
                 {/* <div className="border border-gray-100">
 
@@ -75,6 +124,8 @@ const Chatroom: FC<IProps> = (props) => {
                     <AiOutlineSmile className="text-sky-400 flex-auto flex justify-between items-center"></AiOutlineSmile>
                 </div>
             </div>
+            {/* 聊天室信息 */}
+            {showsidebar?chooseSideBar():""}
         </div>
     );
 };

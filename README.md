@@ -4,11 +4,12 @@
 2. - [ ] @别名无法获取到省略的index.tsx
 3. - [ ] 禁止页面有下拉效果
 4. - [ ] 有人加入了or离开了给个提醒
-5. - [ ] 添加{user} is typing
+5. - [ ] 私聊添加{user} is typing
 6. - [ ] 展示多少人在线，哪些人在线
-7. - [ ] 添加私聊
+7. - [ ] 添加私聊, 私聊窗口右上角直接可查看对方资料
 8. - [ ] 更换favicon
 9. - [ ] tailwind 集成 Scss
+10. - [ ] sidebar添加抽屉动画
 
 # Getting Started with Create React App
 

@@ -94,6 +94,7 @@ export default function ToolPanel(props: IProps) {
               href={item.link}
               key={item.title}
               className={cx(styles["icon-item"])}
+              target="_blank"
             >
               {item.icon}
             </a>

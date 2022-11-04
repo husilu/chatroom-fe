@@ -6,7 +6,7 @@ export interface CounterState {
 }
 
 const initialState: CounterState = {
-    theme: localStorage.getItem('theme')
+    theme: localStorage.getItem('theme') || "theme-pink1"
 }
 
 export const themeSlice = createSlice({
