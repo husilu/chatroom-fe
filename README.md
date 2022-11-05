@@ -9,7 +9,9 @@
 7. - [ ] 添加私聊, 私聊窗口右上角直接可查看对方资料
 8. - [ ] 更换favicon
 9. - [ ] tailwind 集成 Scss
-10. - [ ] sidebar添加抽屉动画
+10. - [x] sidebar添加抽屉动画
+11. - [ ] 当前登陆用户信息展示
+12. - [ ] 减少emoji功能 以及增加 缓存（现在每次打开渲染都很卡）？
 
 # Getting Started with Create React App
 
@@ -73,7 +75,9 @@ Redux Toolkit: https://redux-toolkit.js.org/introduction/getting-started
 
 Socket.io: https://socket.io/
 
+react-tiny-popover: https://github.com/alexkatz/react-tiny-popover#readme
+
+emoji-picker-react: https://www.npmjs.com/package/emoji-picker-react
+
 ## 参考技术文章
 聊天室：https://juejin.cn/post/6854573222415826957#heading-0
-
-Nest.js 实战：https://juejin.cn/post/7032079740982788132

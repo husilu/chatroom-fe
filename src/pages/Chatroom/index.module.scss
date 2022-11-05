@@ -24,6 +24,7 @@
     background-color: var(--bg-color-right);
     position: relative;
     height: 100%;
+    overflow: hidden;
 }
 
 .popColor {
@@ -93,8 +94,13 @@
     position: absolute;
     height: 100%;
     width: 50%;
-    right: 0;
+    right:0;
     top: 0;
+    transform: translateX(100%);
+    transition: transform 0.5s;
+    &.active {
+        transform: translateX(0);
+    }
     .userlistHeader {
         padding: 0 3px;
         background-color: #000;

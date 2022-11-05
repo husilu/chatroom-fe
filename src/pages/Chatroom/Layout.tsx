@@ -19,7 +19,7 @@ export default function Layout() {
   }
   return (
     <div className={cx("flex", "items-center", "justify-center", "h-screen", theme)}>
-      <div className="flex w-10/12 border border-gray-100 h-80v">
+      <div className="flex border border-gray-100 h-full w-full">
         <ToolPanel user={user}></ToolPanel>
         <Informationlist onChoose={onChooseHandler}></Informationlist>
         <ChatBox title={title}></ChatBox> 
