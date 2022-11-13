@@ -8,3 +8,7 @@ export interface User {
 export const loginFetch = (user: User) => {
     return ajax.post('user/login', user)
 }
+
+export const registerFetch = (user: User) => {
+    return ajax.post('user/register', user)
+}

@@ -17,6 +17,7 @@ interface IProps {
 export default function ToolPanel(props: IProps) {
   const dispatch = useDispatch();
   let theme = useSelector((state: any) => state.theme.theme);
+  let user = useSelector((state:any) => state.user.userInfo);
   const [Modaltext, setModaltext] = useState(<></>); // 弹窗内容
   const [ModalVisible, setModalVisible] = useState(false); // 是否显示弹窗
   const navigate = useNavigate();
@@ -77,7 +78,8 @@ export default function ToolPanel(props: IProps) {
         <div>
           <img src="" alt="" />
           <input type="upload" />
-          <p>昵称</p>
+          <p>昵称:{user.nickname}</p>
+          <p>Email:{user.email}</p>
           <input type="text" />
           <button>提交</button>
         </div>
@@ -89,7 +91,7 @@ export default function ToolPanel(props: IProps) {
     setTimeout(() => {
       setModaltext(
         <div>
-          <p>退出登陆？</p>
+          <p>退出登录？</p>
           <button onClick={logoutHandler}>确认</button>
           <button>取消</button>
         </div>
@@ -110,6 +112,7 @@ export default function ToolPanel(props: IProps) {
   }
 
   function logoutHandler() {
+    localStorage.removeItem('token');
     navigate('/login')
   }
 

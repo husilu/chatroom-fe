@@ -9,6 +9,7 @@ import Pop from '../../components/noticePop'
 import EmojiPicker from 'emoji-picker-react';
 import { Popover } from 'react-tiny-popover'
 import { EmojiClickData } from 'emoji-picker-react'
+
 // import userReducer from 'src/store'
 interface IProps {
     content?: string,
@@ -34,6 +35,7 @@ enum roomType {
 }
 
 const Chatroom: FC<IProps> = (props) => {
+    
     // 聊天面板标题
     let { title } = props;
     // 消息内容
