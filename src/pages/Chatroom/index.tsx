@@ -10,6 +10,7 @@ import EmojiPicker from 'emoji-picker-react';
 import { Popover } from 'react-tiny-popover'
 import { EmojiClickData } from 'emoji-picker-react'
 
+
 // import userReducer from 'src/store'
 interface IProps {
     content?: string,
